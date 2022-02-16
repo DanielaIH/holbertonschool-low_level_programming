@@ -16,6 +16,8 @@ int main(void)
 	for (i = 1; i <= (countto / 2); i++)
 	{
 		printf("%li %li ", a, b);
+		_putchar(',');
+		_putchar(' ');
 		a += b;
 		b += a;
 	}
