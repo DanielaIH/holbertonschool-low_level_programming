@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 
 /**
@@ -15,11 +14,14 @@ int main(void)
 
 	for (i = 1; i <= (countto / 2); i++)
 	{
-		printf("%li %li ", a, b);
-		_putchar(',');
-		_putchar(' ');
-		a += b;
-		b += a;
+		if (i < (countto / 2))
+		{
+			printf("%li, %li, ", a, b);
+			a += b;
+			b += a;
+		}
+		else
+			printf("%li, %li", a, b);
 	}
 	if (countto % 2 == 1)
 		printf("%li", a);
