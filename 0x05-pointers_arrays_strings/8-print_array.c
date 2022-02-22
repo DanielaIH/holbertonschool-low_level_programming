@@ -6,17 +6,17 @@
  */
 void print_array(int *a, int n)
 {
-	int b = 0;
+	int i = 0;
 
-	for (b = 0; b < n; b++)
+	for (i = 0; i < n; i++)
 	{
-		if (b == n - 1)
+		if (i == n - 1)
 		{
-			printf("%d", a[b]);
+			printf("%d", a[i]);
 		}
 		else
 		{
-			printf("%d, ", a[b]);
+			printf("%d, ", a[i]);
 		}
 	}
 	printf("\n");
