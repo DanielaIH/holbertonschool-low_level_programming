@@ -21,10 +21,7 @@ int _strcmp(char *s1, char *s2)
 			break;
 		}
 		else
-		{
 			flag = 0;
-			i++;
-		}
 	}
 
 	return (flag);
