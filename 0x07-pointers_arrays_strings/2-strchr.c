@@ -12,9 +12,9 @@ char *_strchr(char *s, char c)
 	char *first = NULL;
 	int i = 0;
 
-	while (*(s + i) != '\0')
+	while (*(s + i))
 	{
-		if (*s == c)
+		if (*(s + i) == c)
 		{
 			first = &(s[i]);
 			break;
