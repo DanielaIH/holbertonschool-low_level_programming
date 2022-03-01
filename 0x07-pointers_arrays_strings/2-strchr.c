@@ -7,20 +7,16 @@
  * @c: target characer
  * Return: pointer to that character in string
  */
+
 char *_strchr(char *s, char c)
 {
-	char *first = NULL;
 	int i = 0;
 
-	while (*(s + i))
-	{
-		if (*(s + i) == c)
-		{
-			first = (s + i);
-			break;
-		}
-		else
-			s++;
-	}
-	return (first);
+	while (*(s + i) && *(s + i) != c)
+		i++;
+
+	if (*(s + i) == c)
+		return (s + i);
+	else
+		return (NULL);
 }
