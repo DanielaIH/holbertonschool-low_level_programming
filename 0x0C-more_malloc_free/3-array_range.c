@@ -24,10 +24,9 @@ int *array_range(int min, int max)
 	if (pointer == NULL)
 		return (NULL);
 
-	for (i = 0; i <= max; i++)
+	for (i = 0; min <= max; min++, i++)
 	{
 		pointer[i] = min;
-		min++;
 	}
 	return (pointer);
 }
