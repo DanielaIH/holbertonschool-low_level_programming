@@ -26,7 +26,8 @@ int *array_range(int min, int max)
 
 	for (i = 0; i <= max; i++)
 	{
-		pointer[i] = min + i;
+		pointer[i] = min;
+		min++;
 	}
 	return (pointer);
 }
