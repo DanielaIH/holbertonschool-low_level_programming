@@ -11,12 +11,6 @@ int main(int argc, char *argv[])
 	int (*pointer)(int, int);
 	int result, num1, num2;
 
-	if (strlen(argv[2] > 1)
-	{
-		printf("Error\n");
-		exit(99);
-	}
-
 	if (argc != 4)
 	{
 		printf("Error\n");
