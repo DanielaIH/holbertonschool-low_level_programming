@@ -8,15 +8,16 @@
 
 int main(int argc, char *argv[])
 {
-	int (*pointer)(int, int);
-	int result, num1, num2;
+int (*pointer)(int, int);
+int result, num1, num2;
 
-	if (argc != 4)
-	{
-		printf("Error\n");
-		exit(98);
-	}
-
+if (argc != 4)
+{
+	printf("Error\n");
+	exit(98);
+}
+else
+{
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
 	pointer = get_op_func(argv[2]);
@@ -27,6 +28,6 @@ int main(int argc, char *argv[])
 	}
 	result = pointer(num1, num2);
 	printf("%d\n", result);
-
-	return (0);
+}
+return (0);
 }
