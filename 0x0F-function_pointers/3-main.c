@@ -16,6 +16,11 @@ if (argc != 4)
 	printf("Error\n");
 	exit(98);
 }
+if (strlen(argv[2]) > 1)
+{
+	printf("Error\n");
+	exit(99);
+}
 else
 {
 	num1 = atoi(argv[1]);
