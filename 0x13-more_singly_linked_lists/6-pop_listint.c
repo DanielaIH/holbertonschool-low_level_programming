@@ -11,8 +11,8 @@ int pop_listint(listint_t **head)
 	int i = 0;
 	listint_t *temp;
 
-	if (head == NULL)
-		return (0);
+	if (*head == NULL)
+		return (i);
 
 	temp = *head; /*asign a temp pointer to head node*/
 	i = temp->n;
