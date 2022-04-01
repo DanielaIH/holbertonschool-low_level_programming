@@ -12,7 +12,7 @@ int pop_listint(listint_t **head)
 	listint_t *temp;
 
 	if (head == NULL)
-		return (i);
+		return (0);
 
 	temp = *head; /*asign a temp pointer to head node*/
 	i = temp->n;
