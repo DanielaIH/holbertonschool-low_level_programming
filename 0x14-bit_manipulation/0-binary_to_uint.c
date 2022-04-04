@@ -14,12 +14,12 @@ unsigned int binary_to_uint(const char *b)
 	if (b == NULL)
 		return (0);
 
-	while (b[i] != '\0') /* iterates through all digit.*/
+	while (b[i] != '\0') /* iterate through all digit.*/
 	{
 		if (b[i] != '0' && b[i] != '1')
 			return (0);
-		number <<= 1;
-		number += b[i] - '0';
+		number <<= 1; /* move number to the left one position*/
+		number += b[i] - '0'; /* add char like a number*/
 		i++;
 	}
 	return (number);
