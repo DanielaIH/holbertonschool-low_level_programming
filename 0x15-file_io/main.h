@@ -1,10 +1,10 @@
 #ifndef _MAIN_H_
 #define _MAIN_H_
-#include <stdio.h> /* printf() */
 #include <sys/types.h> /* definitions */
 #include <sys/stat.h> /* structure of the data */
-#include <fcnt1.h> /* open() */
+#include <fcntl.h> /* open() */
 #include <unistd.h> /* constants */
+#include <stdlib.h> /* malloc */
 
 int _putchar(char c);
 ssize_t read_textfile(const char *filename, size_t letters);
