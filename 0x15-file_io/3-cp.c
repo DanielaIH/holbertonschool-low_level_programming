@@ -25,11 +25,6 @@ fd_2 = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664); /*open file to*/
 if (fd_2 == -1)
 	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]),	exit(99);
 
-if (cl == -1)
-{
-	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
-	exit(100);
-}
 while (rd > 0)
 {
 	rd = read(fd, buf, 1024);
@@ -40,7 +35,8 @@ while (rd > 0)
 	if (wr == -1)
 		return (0);
 }
-close(fd);
+if (close(fd) == -1)
+        dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd), exit(100);
 
 return (0);
 }
