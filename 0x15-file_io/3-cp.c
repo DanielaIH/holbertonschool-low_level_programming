@@ -11,7 +11,8 @@
 
 int main(int argc, char *argv[])
 {
-	int fd, fd_2, wr, rd, cl = 0;
+	ssize_t wr, rd;
+	int fd, fd_2, cl;
 	char buf[1024];
 
 if (argc != 3)
@@ -35,8 +36,9 @@ while (rd > 0)
 	if (wr == -1)
 		return (0);
 }
-if (close(fd) == -1)
-        dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd), exit(100);
+cl = close(fd);
+if (cl == -1)
+	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd), exit(100);
 
 return (0);
 }
