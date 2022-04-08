@@ -28,13 +28,14 @@ if (fd_2 == -1)
 
 while (rd > 0)
 {
-	rd = read(fd, buf, 1024);
-	if (rd == -1)
-		return (0);
-
-	wr = write(fd_2, buf, rd);
-	if (wr == -1)
-		return (0);
+rd = read(fd, buf, 1024);
+if (rd == -1)
+{	dprintf(2, "Error: Can't read from file %s\n", argv[1]), exit(98);
+	return (0); }
+wr = write(fd_2, buf, rd);
+if (wr == -1)
+{	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]),  exit(99);
+	return (0); }
 }
 cl = close(fd);
 if (cl == -1)
