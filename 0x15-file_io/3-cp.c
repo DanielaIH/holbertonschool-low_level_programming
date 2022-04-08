@@ -39,6 +39,8 @@ while (rd > 0)
 cl = close(fd);
 if (cl == -1)
 	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd), exit(100);
-
+cl = close(fd_2);
+if (cl == -1)
+	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_2), exit(100);
 return (0);
 }
