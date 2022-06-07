@@ -25,8 +25,6 @@ void hash_table_print(const hash_table_t *ht)
 		{
 			printf("%s'%s': '%s'", separator, node->key, node->value);
 			separator = ", ";
-			if (node->next == NULL)
-				separator = "";
 			node = node->next;
 		}
 	}
